@@ -12,10 +12,21 @@
 <div class="clear"></div>
 
 <p>
-  <b>Description:</b>
+  <h4>Description:</h4>
   <%= @activity.description %>
 </p>
 
+<%= image_tag "/images/map.png" %>
+
+<br>
+
+<h3> Experiences </h3>
+
+<%= link_to "write about your experience", activities_path %>
+
+<br><br>
+
+I had a great experience doing this. I went to the link_to "local place", activities_path %> and it was a great deal.
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>

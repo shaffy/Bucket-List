@@ -11,15 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111113203539) do
+ActiveRecord::Schema.define(:version => 20111113013145) do
 
   create_table "activities", :force => true do |t|
-    t.string   "name"
+    t.string   "name",                           :null => false
     t.text     "description"
+    t.string   "due"
+    t.boolean  "private",     :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "Private"
-    t.string   "Due"
   end
 
   create_table "bucket_items", :force => true do |t|
