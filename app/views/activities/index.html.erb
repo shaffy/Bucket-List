@@ -12,14 +12,21 @@
   </tr>
 
 <% @activities.each do |activity| %>
-  <tr>
-	<td><%= link_to activity.name, activity %></td>
+  <tr class="activity">
+	<td class="activity-name"><%= link_to activity.name, activity %></td>
     <td><%= activity.description %></td>
     
 	<% if BucketItem.where(:activity_id => activity.id, :user_id => 1).exists? %>
 		<td>- activity already in your bucket list</td>
 	<% else %>
-		<td><%= link_to '+ add to my bucket list', add_activity_path(activity.id) %></td>
+		
+	<td class="add-activity">
+		<%= link_to(add_activity_path(activity.id), :class => 'image-plus') do %>
+			 <%= image_tag ("/images/plus-small.png") %>
+		<% end %>
+		<div class="add-text">add to my bucket list</div>
+	</td>
+	
 	<% end %>
   </tr>
 <% end %>
@@ -27,6 +34,4 @@
 
 <br />
 
-<%= link_to 'New Activity', new_activity_path %>
-
-<%=  User.find(1).bucket_items %>
+<%= link_to 'create a new activity', new_activity_path %>

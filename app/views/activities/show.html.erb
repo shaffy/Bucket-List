@@ -1,9 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<div id="activity-name">
   <%= @activity.name %>
-</p>
+</div>
+
+<div id="add-activity2">
+	<%= link_to image_tag("/images/plus.png"), new_activity_path, :class => 'plus-image2' %>
+	<div id="add-text2">add activity to my bucket list</div>
+</div>
+
+<div class="clear"></div>
 
 <p>
   <b>Description:</b>

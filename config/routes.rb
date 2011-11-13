@@ -1,7 +1,7 @@
 BucketList::Application.routes.draw do
   resources :users do
     member do
-	  get 'bucket_list'
+	  get 'bucket_list', 'check_activity'
 	end
   end
   

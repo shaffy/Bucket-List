@@ -1,1 +1,40 @@
-<%= render @activities %>
+<% complete = @bucket_items.where(:complete => true) %>
+<% incomplete = @bucket_items.where(:complete =>false) %>
+
+<h3><div id="my-bucket">My Bucket List </div><div id="my-bucket-add"><%= link_to 'create a new activity', new_activity_path %></div></h3>
+
+<div class="clear"></div>
+
+<div id="completed">Have to Do</div>
+
+<% incomplete.each_with_index do |bucket_item, index| %>
+	<div class="bucket-item-<%= index %> bucket-list-item">
+		<div class="bucket-name">
+			<%= bucket_item.activity.name %>
+		</div>
+	
+		<div class="check">
+			<%= link_to "check", check_activity_user_path(:id => bucket_item.id, :item => index), :remote => true %>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+		
+<% end %>
+
+<div id="completed">Completed</div>
+
+<% complete.each do |bucket_item| %>
+	<div class="bucket-list-item">	
+		<div class="bucket-name">
+			<%= bucket_item.activity.name %>
+		</div>
+		
+		<div class="complete-on">
+			completed on <%= bucket_item.updated_at.to_date %>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+<% end %>

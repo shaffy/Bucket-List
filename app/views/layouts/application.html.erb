@@ -15,14 +15,13 @@
 	<title>bucketlist - list, share, and organize!</title>
   
 	<!-- Included CSS Files -->
-	<link rel="stylesheet" href="stylesheets/foundation.css">
-	<link rel="stylesheet" href="stylesheets/app.css">
-	<link rel="stylesheet" href="stylesheets/site.css">
+	<link rel="stylesheet" href="/stylesheets/foundation.css">
+	<link rel="stylesheet" href="/stylesheets/app.css">
+	<link rel="stylesheet" href="/stylesheets/site.css">
 
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="stylesheets/ie.css">
+		<link rel="stylesheet" href="/stylesheets/ie.css">
 	<![endif]-->
-
 	
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
@@ -54,7 +53,7 @@
 						<ul id="jsddm">
 							<li id="account-link"><div class="userpic"><img src="http://profile.ak.fbcdn.net/hprofile-ak-snc4/371572_1137780124_1094899656_q.jpg" width="20px" height="20px" alt="Thomas Chen" /></div>
 							My Account
-							<img src="images/drop.gif">
+							<img src="/images/drop.gif">
 								<ul>
 									<li><a href="#">Account Settings</a></li>
 									<li><a href="#">Email Settings</a></li>
@@ -70,18 +69,16 @@
 
 		<div class="row">
 			<div class="eight columns">
-				<dl class="tabs">
-					<dd><a href="#simple1" class="active">My List</a></dd>
-					<dd><a href="#simple2">Profile</a></dd>
-					<dd><a href="#simple3">Explore</a></dd>
-				</dl>
 				
-				<ul class="tabs-content">
-					<li class="active" id="simple1Tab"><%= yield %></li>
-					<li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
-					<li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
-				</ul>
-			
+				<div id="menu">
+					<%= link_to "My Bucket List", bucket_list_user_path(:id => 1), :class => 'menu-item' %>
+					<%= link_to "Find Activites", activities_path, :class => 'menu-item' %>
+				</div>
+				
+				<div class="clear"></div>
+				
+				<%= yield %>
+				
 			</div>
 		
 			<%= render :partial => "shared/sidebar" %>
@@ -97,9 +94,9 @@
 	<!-- container -->
 
 	<!-- Included JS Files -->
-	<script type="text/javascript" src="javascripts/foundation.js"></script>
-	<script type="text/javascript" src="javascripts/app.js"></script>
-	<script type="text/javascript" src="javascripts/drop.js"></script>
+	<script type="text/javascript" src="/javascripts/foundation.js"></script>
+	<script type="text/javascript" src="/javascripts/app.js"></script>
+	<script type="text/javascript" src="/javascripts/drop.js"></script>
 	
 </body>
 </html>

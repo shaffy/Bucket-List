@@ -84,11 +84,25 @@ class UsersController < ApplicationController
   
   def bucket_list
 	@user = User.find(params[:id])
-	@activities = @user.activities
+	@bucket_items = @user.bucket_items
 	
 	respond_to do |format|
-      format.html { redirect_to users_url }
+      format.html
       format.json { head :ok }
     end
+  end
+  
+  def check_activity
+    @bucket_item = BucketItem.find(params[:id])
+	
+	respond_to do |format|
+	  if @bucket_item.update_attribute(:complete, true)
+		format.js
+		format.html { redirect_to bucket_list_user_path(@bucket_item), notice: 'Checked off' }
+	  else
+		format.html { render action: "edit" }
+		format.json { render json: @user.errors, status: :unprocessable_entity }
+	  end
+	end
   end
 end
