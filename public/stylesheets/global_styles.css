@@ -1,0 +1,73 @@
+body {
+	/* background: #edf4f9; */
+	background: #f9f9f9;
+	margin:0;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 1.5em;
+	color: #000;
+}
+
+h1 {
+	font-size: 2.2em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+a {
+	text-decoration:none;
+	color: #3080c8;
+}
+
+a:hover {
+	color: #36A0FF
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.image {
+	list-style-type: none;
+}
+
+.admin-link {
+	color: #d30e0e;
+}
+
+.admin-controls {
+	float: left;
+	padding: 4px;
+	background: #f8d4d4;
+	border: 1px solid #f7b8b8;
+}
+
+.admin-link:hover {
+	color: #ff1919;
+}
+
+.clear {
+	clear: both;
+}
+
+.clear-left {
+	clear: left;
+}
+
+/* -------------------------------------- Global Layout -------------------------------------- */
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* ----------------------------------------- Header ------------------------------------------ */
+

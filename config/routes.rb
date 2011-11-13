@@ -1,5 +1,16 @@
 BucketList::Application.routes.draw do
-  resources :activities
+  resources :users do
+    member do
+	  get 'bucket_list'
+	end
+  end
+  
+  resources :activities do
+    member do
+	  get 'add'
+	end
+  end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

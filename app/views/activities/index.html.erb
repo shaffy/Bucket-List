@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Listing activities</h1>
 
 <table>
@@ -11,11 +13,14 @@
 
 <% @activities.each do |activity| %>
   <tr>
-    <td><%= activity.name %></td>
+	<td><%= link_to activity.name, activity %></td>
     <td><%= activity.description %></td>
-    <td><%= link_to 'Show', activity %></td>
-    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-    <td><%= link_to 'Destroy', activity, confirm: 'Are you sure?', method: :delete %></td>
+    
+	<% if BucketItem.where(:activity_id => activity.id, :user_id => 1).exists? %>
+		<td>- activity already in your bucket list</td>
+	<% else %>
+		<td><%= link_to '+ add to my bucket list', add_activity_path(activity.id) %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>
@@ -23,3 +28,5 @@
 <br />
 
 <%= link_to 'New Activity', new_activity_path %>
+
+<%=  User.find(1).bucket_items %>

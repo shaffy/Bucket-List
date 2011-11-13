@@ -80,4 +80,19 @@ class ActivitiesController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def add
+    @activity = Activity.find(params[:id])
+	@bucket_item = User.find(1).bucket_items.build(:activity_id => @activity.id)
+	
+	respond_to do |format|
+      if @bucket_item.save
+        format.html { redirect_to activities_url, notice: 'Activity was successfully added.' }
+        format.json { render json: activities_url, status: :created, location: @activity }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @activity.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 end

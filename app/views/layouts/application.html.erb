@@ -1,14 +1,105 @@
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-  <title>BucketList</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>bucketlist - list, share, and organize!</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/site.css">
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
 </head>
 <body>
 
-<%= yield %>
+	<!-- container -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="twelve columns headerborder">
+				<div class="logo">
+					<img src="/images/logo2.png" alt="bucketlist" />
+					<p>list, share, and plan the things you want to do before you graduate!</p>
+				</div>
+				<div class="topnav">
+					<div id="search">
+						<form action="search.php" method="post">
+							<input type="text" class="small input-text" placeholder=" Search for things to do..." required />
+							<input type="submit" name="submit" value="Search">
+						</form>
+					</div>
+					<div id="accountmenu">
+						<ul id="jsddm">
+							<li id="account-link"><div class="userpic"><img src="http://profile.ak.fbcdn.net/hprofile-ak-snc4/371572_1137780124_1094899656_q.jpg" width="20px" height="20px" alt="Thomas Chen" /></div>
+							My Account
+							<img src="images/drop.gif">
+								<ul>
+									<li><a href="#">Account Settings</a></li>
+									<li><a href="#">Email Settings</a></li>
+									<li id="end"><a href="#">Logout</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr />
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="eight columns">
+				<dl class="tabs">
+					<dd><a href="#simple1" class="active">My List</a></dd>
+					<dd><a href="#simple2">Profile</a></dd>
+					<dd><a href="#simple3">Explore</a></dd>
+				</dl>
+				
+				<ul class="tabs-content">
+					<li class="active" id="simple1Tab"><%= yield %></li>
+					<li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
+					<li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
+				</ul>
+			
+			</div>
+		
+			<%= render :partial => "shared/sidebar" %>
+		</div>
+		
+		<hr />
+		
+		<footer>
+			&copy; 2011 bucketlist
+		</footer>
+		
+	</div>
+	<!-- container -->
+
+	<!-- Included JS Files -->
+	<script type="text/javascript" src="javascripts/foundation.js"></script>
+	<script type="text/javascript" src="javascripts/app.js"></script>
+	<script type="text/javascript" src="javascripts/drop.js"></script>
+	
 </body>
 </html>

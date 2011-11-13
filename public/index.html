@@ -1,241 +1,169 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<html lang="en">
+<head>
+<meta charset="utf-8" />
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+<title>bucketlist - things you want to do</title>
+<meta name="description" content="bucketlist allows you to create, organize, plan, and share, plan things you and your friends want to do!">
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
+<style type="text/css">
+  body
+  {
+    background-color: #404040;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+	margin: 0px
+  }
 
+  a:link {color: #fff; text-decoration: underline; }
+  a:active {color: #fff; text-decoration: underline; }
+  a:visited {color: #fff; text-decoration: underline; }
+  a:hover {color: #fff; text-decoration: none; }
 
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
+  div
+  {
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  #maindiv
+  {
+    width: 100%;
+	margin-top: 0px;
+  }
 
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
+#loginbtn {
+  margin-right: auto;
+  margin-left: auto;
+  background: url('https://s3.amazonaws.com/static.turntable.fm/images/indexlogin/button_fb_sprite.png') 0px 0px no-repeat;
+  width: 314px;
+  height: 63px;
+  cursor: pointer;
+  
+}
+#loginbtn:hover {
+  background-position: 0px -63px;
+}
+#loginbtn:active {
+  background-position: 0px -126px;
+}
 
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
+#landing_bg {
+  background-color: #505254;
+  padding-top: 45px;
+}
 
-      #footer {
-        clear: both;
-      }
+#landing {
+  width: 1000px;
+  height: 460px;
+  margin: auto;  
+}
 
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
+#landing #box {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+#landing #box #logo {
+  background: url('http://www.datboitom.com/bucket/img/logo.png') 0px 0px no-repeat;
+  width: 500px;
+  height: 80px;
+  margin-bottom: 18px;
+}
 
-      #header {
-        background-image: url("/assets/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
+#landing #box #headline {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  width: 500px;
+  height: 100px;
+  margin-bottom: 36px;
+  text-align: center;
 
+  text-shadow: 1px 1px 1px #000;
+  filter: dropshadow(color=#000, offx=1, offy=1);
+}
 
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
+#landing #box #blurb {
+  font-size: 20px;
+  color: #a9a9a9;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  line-height: 28px;
 
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
+  text-shadow: 1px 1px 1px #404040;
+  filter: dropshadow(color=#404040, offx=1, offy=1);
+}
 
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
+footer {
+  clear: both;
+  width: 1000px;
+  margin: auto;
+  padding-top: 35px;
+  text-align: center;
+  color: #ccc;
+  font-size: 10px;
+}
 
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
+.aligncenter {
+	text-align: center;
+}
 
+</style>
 
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
 
+</head>
+<body> 
+	<div id="maindiv">
+		<div id="landing_bg">
+			<div id="landing">
+				<div id="box">
+					<div id="logo"></div>
+					<div id="headline">Do the things you want to do...</div>
+					<div id="blurb">bucketlist allows you to create, share, and organize things you and your friends want to do!</div>
 
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-      .filename {
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+					<!-- FACEBOOK LOGIN -->
+      				<div id="fb-root"></div>
+					<script type="text/javascript">
+					  window.fbAsyncInit = function() {
+					    FB.init({
+					      appId      : '236295326433533',
+					      status     : true, 
+					      cookie     : true,
+					      xfbml      : true
+					    });
+					  };
+					  (function(d){
+					     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+					     js = d.createElement('script'); js.id = id; js.async = true;
+					     js.src = "//connect.facebook.net/en_US/all.js";
+					     d.getElementsByTagName('head')[0].appendChild(js);
+					   }(document));
+					</script>
+					<div class="fb-login-button aligncenter">Login with Facebook</div>
+					
+					<br>
+					
+					<!-- FACEBOOK LIKE -->
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+				  		var js, fjs = d.getElementsByTagName(s)[0];
+				  		if (d.getElementById(id)) {return;}
+				  			js = d.createElement(s); js.id = id;
+				  			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=236295326433533";
+				  			fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+					</script>
+					
+					<div class="fb-like aligncenter" data-send="true" data-width="450" data-show-faces="true">
+      			</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div id="copyright">&copy; 2011 bucketlist</div>
+	</footer>
+</body>
 </html>
