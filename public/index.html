@@ -5,165 +5,51 @@
 
 <title>bucketlist - things you want to do</title>
 <meta name="description" content="bucketlist allows you to create, organize, plan, and share, plan things you and your friends want to do!">
-
-<style type="text/css">
-  body
-  {
-    background-color: #404040;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #fff;
-	margin: 0px
-  }
-
-  a:link {color: #fff; text-decoration: underline; }
-  a:active {color: #fff; text-decoration: underline; }
-  a:visited {color: #fff; text-decoration: underline; }
-  a:hover {color: #fff; text-decoration: none; }
-
-  div
-  {
-    color: #fff;
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  #maindiv
-  {
-    width: 100%;
-	margin-top: 0px;
-  }
-
-#loginbtn {
-  margin-right: auto;
-  margin-left: auto;
-  background: url('https://s3.amazonaws.com/static.turntable.fm/images/indexlogin/button_fb_sprite.png') 0px 0px no-repeat;
-  width: 314px;
-  height: 63px;
-  cursor: pointer;
-  
-}
-#loginbtn:hover {
-  background-position: 0px -63px;
-}
-#loginbtn:active {
-  background-position: 0px -126px;
-}
-
-#landing_bg {
-  background-color: #505254;
-  padding-top: 45px;
-}
-
-#landing {
-  width: 1000px;
-  height: 460px;
-  margin: auto;  
-}
-
-#landing #box {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#landing #box #logo {
-  background: url('http://www.datboitom.com/bucket/img/logo.png') 0px 0px no-repeat;
-  width: 500px;
-  height: 80px;
-  margin-bottom: 18px;
-}
-
-#landing #box #headline {
-  font-size: 48px;
-  font-weight: bold;
-  color: #fff;
-  width: 500px;
-  height: 100px;
-  margin-bottom: 36px;
-  text-align: center;
-
-  text-shadow: 1px 1px 1px #000;
-  filter: dropshadow(color=#000, offx=1, offy=1);
-}
-
-#landing #box #blurb {
-  font-size: 20px;
-  color: #a9a9a9;
-  margin-bottom: 30px;
-  margin-left: 10px;
-  line-height: 28px;
-
-  text-shadow: 1px 1px 1px #404040;
-  filter: dropshadow(color=#404040, offx=1, offy=1);
-}
-
-footer {
-  clear: both;
-  width: 1000px;
-  margin: auto;
-  padding-top: 35px;
-  text-align: center;
-  color: #ccc;
-  font-size: 10px;
-}
-
-.aligncenter {
-	text-align: center;
-}
-
-</style>
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
-
 </head>
-<body> 
-	<div id="maindiv">
-		<div id="landing_bg">
-			<div id="landing">
-				<div id="box">
-					<div id="logo"></div>
-					<div id="headline">Do the things you want to do...</div>
-					<div id="blurb">bucketlist allows you to create, share, and organize things you and your friends want to do!</div>
+<body>
+	<!-- FACEBOOK LOGIN -->
+	<div id="fb-root"></div>
 
-					<!-- FACEBOOK LOGIN -->
-      				<div id="fb-root"></div>
-					<script type="text/javascript">
-					  window.fbAsyncInit = function() {
-					    FB.init({
-					      appId      : '236295326433533',
-					      status     : true, 
-					      cookie     : true,
-					      xfbml      : true
-					    });
-					  };
-					  (function(d){
-					     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-					     js = d.createElement('script'); js.id = id; js.async = true;
-					     js.src = "//connect.facebook.net/en_US/all.js";
-					     d.getElementsByTagName('head')[0].appendChild(js);
-					   }(document));
-					</script>
-					<div class="fb-login-button aligncenter">Login with Facebook</div>
-					
-					<br>
-					
-					<!-- FACEBOOK LIKE -->
-					<div id="fb-root"></div>
-					<script>(function(d, s, id) {
-				  		var js, fjs = d.getElementsByTagName(s)[0];
-				  		if (d.getElementById(id)) {return;}
-				  			js = d.createElement(s); js.id = id;
-				  			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=236295326433533";
-				  			fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));
-					</script>
-					
-					<div class="fb-like aligncenter" data-send="true" data-width="450" data-show-faces="true">
-      			</div>
-			</div>
-		</div>
-	</div>
-	<footer>
-		<div id="copyright">&copy; 2011 bucketlist</div>
-	</footer>
+	<script type="text/javascript">
+	    window.fbAsyncInit = function() {
+		FB._https = window.location.protocol == "https:";
+		FB.init({appId:'236295326433533', cookie:true, status:true, xfbml:true, oauth: true});
+
+		FB.getLoginStatus(function(response) {
+	        if (response.status === 'connected') {
+				// user is logged in and connected to the app
+				// window.fb_id = response.authResponse.userID;
+				token_redirect(response.authResponse.accessToken);
+	        }
+			else {
+				window.location = '/login.html'
+			}
+		});
+		
+		FB.Event.subscribe('auth.authResponseChange', function(response) {
+			  window.location = '/users/1'
+			});
+	    };
+
+	    (function() {
+	      var e = document.createElement('script');
+	      e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+	      e.async = true;
+	      document.getElementById('fb-root').appendChild(e);
+	    }());
+
+	    function login(args)
+	    {  
+	       token_redirect(args.session.access_token);
+	    }
+	    function token_redirect(fbtoken)
+	    {
+			// if (window.fb_id) {
+	       	//	window.location = '/bucket/home.html?token=' + fbtoken;
+			// }
+			window.location = '/users/1'
+	    }
+
+	</script>
 </body>
 </html>

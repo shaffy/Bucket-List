@@ -19,6 +19,14 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+   <div class="field">
+    <%= f.label :due %><br />
+    <%= f.text_field :due, :id => 'date' %>
+  </div>
+   <div class="field">
+    <%= f.label :private %><br />
+    <%= f.check_box :private %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

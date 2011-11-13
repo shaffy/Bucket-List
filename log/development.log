@@ -18431,3 +18431,1996 @@ ActionView::Template::Error (undefined method `private' for #<Activity:0x5ba3178
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 14:48:04 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" [0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 9 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 10 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 11 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 12 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 13 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 14 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 15 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 16 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (31.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 14:48:06 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 7 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 8 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 9 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 10 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 11 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 12 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 13 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 14 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (74.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 87ms (Views: 80.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 14:48:14 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (9.0ms)
+Rendered activities/new.html.erb within layouts/application (11.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddDueToActivity (20111113203539)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "Private" boolean, "Due" varchar(255)) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("activities")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "activities"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (6, 'Learn French', 'learn a new language', '2011-11-13 02:43:52.304995', '2011-11-13 02:43:52.304995', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (7, 'go skydiving', 'jump out of a plane!', '2011-11-13 02:44:10.212019', '2011-11-13 02:44:10.212019', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (8, 'punch bogdan in the nuts', 'YEAH', '2011-11-13 02:44:26.463949', '2011-11-13 02:44:26.463949', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (9, 'suck dick', 'i wanna suck dick', '2011-11-13 04:05:49.065218', '2011-11-13 04:05:49.065218', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (10, 'winning start up weekend', '', '2011-11-13 07:14:00.011121', '2011-11-13 07:14:00.011121', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (11, 'act 1', '', '2011-11-13 07:17:12.406125', '2011-11-13 07:17:12.406125', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (12, 'act 2', '', '2011-11-13 07:17:21.039619', '2011-11-13 07:17:21.039619', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (13, 'act 3', '', '2011-11-13 07:17:36.605509', '2011-11-13 07:17:36.605509', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (14, 'sdfsdff', '', '2011-11-13 08:10:41.687686', '2011-11-13 08:10:41.687686', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (15, 'new activity', 'a new activity', '2011-11-13 19:28:10.208399', '2011-11-13 19:28:10.208399', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private","Due") VALUES (16, 'new activity 2', '', '2011-11-13 20:29:39.608152', '2011-11-13 20:29:39.608152', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "activities"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "Private" boolean) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_activities")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_activities"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (6, 'Learn French', 'learn a new language', '2011-11-13 02:43:52.304995', '2011-11-13 02:43:52.304995', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (7, 'go skydiving', 'jump out of a plane!', '2011-11-13 02:44:10.212019', '2011-11-13 02:44:10.212019', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (8, 'punch bogdan in the nuts', 'YEAH', '2011-11-13 02:44:26.463949', '2011-11-13 02:44:26.463949', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (9, 'suck dick', 'i wanna suck dick', '2011-11-13 04:05:49.065218', '2011-11-13 04:05:49.065218', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (10, 'winning start up weekend', '', '2011-11-13 07:14:00.011121', '2011-11-13 07:14:00.011121', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (11, 'act 1', '', '2011-11-13 07:17:12.406125', '2011-11-13 07:17:12.406125', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (12, 'act 2', '', '2011-11-13 07:17:21.039619', '2011-11-13 07:17:21.039619', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (13, 'act 3', '', '2011-11-13 07:17:36.605509', '2011-11-13 07:17:36.605509', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (14, 'sdfsdff', '', '2011-11-13 08:10:41.687686', '2011-11-13 08:10:41.687686', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (15, 'new activity', 'a new activity', '2011-11-13 19:28:10.208399', '2011-11-13 19:28:10.208399', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at","Private") VALUES (16, 'new activity 2', '', '2011-11-13 20:29:39.608152', '2011-11-13 20:29:39.608152', NULL)
+  [1m[36m (15.6ms)[0m  [1mDROP TABLE "altered_activities"[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20111113203539'
+Migrating to AddPrivateToActivity (20111113203346)
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "Private" boolean) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("activities")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "activities"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (6, 'Learn French', 'learn a new language', '2011-11-13 02:43:52.304995', '2011-11-13 02:43:52.304995', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (7, 'go skydiving', 'jump out of a plane!', '2011-11-13 02:44:10.212019', '2011-11-13 02:44:10.212019', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (8, 'punch bogdan in the nuts', 'YEAH', '2011-11-13 02:44:26.463949', '2011-11-13 02:44:26.463949', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (9, 'suck dick', 'i wanna suck dick', '2011-11-13 04:05:49.065218', '2011-11-13 04:05:49.065218', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (10, 'winning start up weekend', '', '2011-11-13 07:14:00.011121', '2011-11-13 07:14:00.011121', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (11, 'act 1', '', '2011-11-13 07:17:12.406125', '2011-11-13 07:17:12.406125', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (12, 'act 2', '', '2011-11-13 07:17:21.039619', '2011-11-13 07:17:21.039619', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (13, 'act 3', '', '2011-11-13 07:17:36.605509', '2011-11-13 07:17:36.605509', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (14, 'sdfsdff', '', '2011-11-13 08:10:41.687686', '2011-11-13 08:10:41.687686', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (15, 'new activity', 'a new activity', '2011-11-13 19:28:10.208399', '2011-11-13 19:28:10.208399', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_activities" ("id","name","description","created_at","updated_at","Private") VALUES (16, 'new activity 2', '', '2011-11-13 20:29:39.608152', '2011-11-13 20:29:39.608152', NULL)
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "activities"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_activities")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_activities"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (6, 'Learn French', 'learn a new language', '2011-11-13 02:43:52.304995', '2011-11-13 02:43:52.304995')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (7, 'go skydiving', 'jump out of a plane!', '2011-11-13 02:44:10.212019', '2011-11-13 02:44:10.212019')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (8, 'punch bogdan in the nuts', 'YEAH', '2011-11-13 02:44:26.463949', '2011-11-13 02:44:26.463949')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (9, 'suck dick', 'i wanna suck dick', '2011-11-13 04:05:49.065218', '2011-11-13 04:05:49.065218')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (10, 'winning start up weekend', '', '2011-11-13 07:14:00.011121', '2011-11-13 07:14:00.011121')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (11, 'act 1', '', '2011-11-13 07:17:12.406125', '2011-11-13 07:17:12.406125')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (12, 'act 2', '', '2011-11-13 07:17:21.039619', '2011-11-13 07:17:21.039619')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (13, 'act 3', '', '2011-11-13 07:17:36.605509', '2011-11-13 07:17:36.605509')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (14, 'sdfsdff', '', '2011-11-13 08:10:41.687686', '2011-11-13 08:10:41.687686')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (15, 'new activity', 'a new activity', '2011-11-13 19:28:10.208399', '2011-11-13 19:28:10.208399')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "activities" ("id","name","description","created_at","updated_at") VALUES (16, 'new activity 2', '', '2011-11-13 20:29:39.608152', '2011-11-13 20:29:39.608152')[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_activities"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20111113203346'[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (15.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("activities")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bucket_items")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("user_activities")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateBucketItems (20111113013145)
+  [1m[36m (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "bucket_items"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20111113013145'[0m
+Migrating to CreateUserActivities (20111113010506)
+  [1m[35m (1.0ms)[0m  DROP TABLE "user_activities"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20111113010506'[0m
+Migrating to CreateUsers (20111113005141)
+  [1m[35m (1.0ms)[0m  DROP TABLE "users"
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20111113005141'[0m
+Migrating to CreateActivities (20111112233532)
+  [1m[35m (1.0ms)[0m  DROP TABLE "activities"
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20111112233532'[0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateActivities (20111112233532)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateActivities (20111112233532)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateActivities (20111112233532)
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "description" text, "due" varchar(255), "private" boolean DEFAULT 'f' NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111112233532')
+Migrating to CreateUsers (20111113005141)
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "about" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111113005141')
+Migrating to CreateUserActivities (20111113010506)
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "user_activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "activity_id" integer, "complete" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111113010506')
+Migrating to CreateBucketItems (20111113013145)
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "bucket_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "activity_id" integer NOT NULL, "complete" boolean DEFAULT 'f' NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111113013145')
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("activities")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bucket_items")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("user_activities")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 14:55:23 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (9.0ms)
+Rendered activities/new.html.erb within layouts/application (10.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-13 14:55:32 -0600
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Rendered users/index.html.erb within layouts/application (1.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-11-13 14:55:34 -0600
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (9.0ms)
+Rendered users/new.html.erb within layouts/application (11.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-11-13 14:56:00 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "user"=>{"username"=>"Austin", "email"=>"I like turtles", "about"=>""}, "commit"=>"Create User"}
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["about", ""], ["created_at", Sun, 13 Nov 2011 20:56:00 UTC +00:00], ["email", "I like turtles"], ["updated_at", Sun, 13 Nov 2011 20:56:00 UTC +00:00], ["username", "Austin"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 14ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-11-13 14:56:00 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered users/show.html.erb within layouts/application (6.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-11-13 14:56:05 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=2):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-13 14:56:08 -0600
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Rendered users/index.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-11-13 14:56:10 -0600
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (8.0ms)
+Rendered users/new.html.erb within layouts/application (12.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-13 14:56:36 -0600
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (6.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-11-13 14:56:38 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered users/show.html.erb within layouts/application (6.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 24ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-13 14:56:43 -0600
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (8.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-11-13 14:56:44 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered users/show.html.erb within layouts/application (5.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-13 14:56:45 -0600
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-11-13 14:56:47 -0600
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (8.0ms)
+Rendered users/new.html.erb within layouts/application (10.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-11-13 14:57:26 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "user"=>{"username"=>"Bogdan", "email"=>"bogdan@gmail.com", "about"=>"hello world!!!"}, "commit"=>"Create User"}
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["about", "hello world!!!"], ["created_at", Sun, 13 Nov 2011 20:57:26 UTC +00:00], ["email", "bogdan@gmail.com"], ["updated_at", Sun, 13 Nov 2011 20:57:26 UTC +00:00], ["username", "Bogdan"]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 14ms
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-11-13 14:57:26 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered users/show.html.erb within layouts/application (32.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 14:57:27 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+Rendered users/bucket_list.html.erb within layouts/application (14.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 14:57:29 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" 
+Rendered activities/index.html.erb within layouts/application (1.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 14:57:31 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (8.0ms)
+Rendered activities/new.html.erb within layouts/application (11.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2011-11-13 14:57:37 -0600
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "activity"=>{"name"=>"go skydiving", "description"=>""}, "commit"=>"Create Activity"}
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "activities" ("created_at", "description", "due", "name", "private", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 13 Nov 2011 20:57:37 UTC +00:00], ["description", ""], ["due", nil], ["name", "go skydiving"], ["private", false], ["updated_at", Sun, 13 Nov 2011 20:57:37 UTC +00:00]]
+Redirected to http://localhost:3000/activities/1
+Completed 302 Found in 13ms
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 14:57:37 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 14:57:42 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" [0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (17.0ms)
+Rendered shared/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 14:57:46 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (8.0ms)
+Rendered activities/new.html.erb within layouts/application (10.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2011-11-13 14:57:50 -0600
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "activity"=>{"name"=>"poop", "description"=>""}, "commit"=>"Create Activity"}
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "activities" ("created_at", "description", "due", "name", "private", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 13 Nov 2011 20:57:50 UTC +00:00], ["description", ""], ["due", nil], ["name", "poop"], ["private", false], ["updated_at", Sun, 13 Nov 2011 20:57:50 UTC +00:00]]
+Redirected to http://localhost:3000/activities/2
+Completed 302 Found in 40ms
+
+
+Started GET "/activities/2" for 127.0.0.1 at 2011-11-13 14:57:50 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered activities/show.html.erb within layouts/application (8.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 14:57:51 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" [0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (18.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 14:58:23 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+Rendered users/bucket_list.html.erb within layouts/application (62.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 14:58:24 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (10.0ms)
+Rendered activities/new.html.erb within layouts/application (11.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2011-11-13 14:58:55 -0600
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "activity"=>{"name"=>"hack", "description"=>"", "due"=>"10/20", "private"=>"1"}, "commit"=>"Create Activity"}
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "activities" ("created_at", "description", "due", "name", "private", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 13 Nov 2011 20:58:55 UTC +00:00], ["description", ""], ["due", "10/20"], ["name", "hack"], ["private", true], ["updated_at", Sun, 13 Nov 2011 20:58:55 UTC +00:00]]
+Redirected to http://localhost:3000/activities/3
+Completed 302 Found in 13ms
+
+
+Started GET "/activities/3" for 127.0.0.1 at 2011-11-13 14:58:55 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered activities/show.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 14:58:57 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" [0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 3 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (21.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities/1/add" for 127.0.0.1 at 2011-11-13 14:59:06 -0600
+  Processing by ActivitiesController#add as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "bucket_items" ("activity_id", "complete", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["activity_id", 1], ["complete", false], ["created_at", Sun, 13 Nov 2011 20:59:06 UTC +00:00], ["updated_at", Sun, 13 Nov 2011 20:59:06 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 43ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 14:59:06 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" 
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 3 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (21.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities/3/add" for 127.0.0.1 at 2011-11-13 14:59:12 -0600
+  Processing by ActivitiesController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "bucket_items" ("activity_id", "complete", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["activity_id", 3], ["complete", false], ["created_at", Sun, 13 Nov 2011 20:59:12 UTC +00:00], ["updated_at", Sun, 13 Nov 2011 20:59:12 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 68ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 14:59:12 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" [0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 3 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (45.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 14:59:28 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+Rendered users/bucket_list.html.erb within layouts/application (68.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/check_activity?item=0" for 127.0.0.1 at 2011-11-13 14:59:30 -0600
+  Processing by UsersController#check_activity as HTML
+  Parameters: {"item"=>"0", "id"=>"1"}
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (1.0ms)[0m  [1mUPDATE "bucket_items" SET "complete" = 't', "updated_at" = '2011-11-13 20:59:30.743472' WHERE "bucket_items"."id" = 1[0m
+Redirected to http://localhost:3000/users/1/bucket_list
+Completed 302 Found in 20ms
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 14:59:30 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (69.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 82ms (Views: 78.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:01:06 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (69.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 82ms (Views: 77.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:01:07 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" 
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `where' for #<Array:0x45211c8>):
+  app/controllers/activities_controller.rb:5:in `index'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:01:47 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" [0m
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `where' for #<Array:0x45fc000>):
+  app/controllers/activities_controller.rb:6:in `index'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:02:12 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (20.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:02:15 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (43.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:02:18 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (19.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:02:27 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (46.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:02:30 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (20.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:06:48 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (23.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:06:52 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (43.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:13:05 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (20.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:13:12 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (22.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 15:13:14 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (35.0ms)
+Rendered activities/new.html.erb within layouts/application (38.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2011-11-13 15:13:18 -0600
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "activity"=>{"name"=>"asdfdfs", "description"=>"dsdfsdf", "due"=>"sdfsdf", "private"=>"0"}, "commit"=>"Create Activity"}
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "activities" ("created_at", "description", "due", "name", "private", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 13 Nov 2011 21:13:18 UTC +00:00], ["description", "dsdfsdf"], ["due", "sdfsdf"], ["name", "asdfdfs"], ["private", false], ["updated_at", Sun, 13 Nov 2011 21:13:18 UTC +00:00]]
+Redirected to 
+Completed 500 Internal Server Error in 13ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/activities_controller.rb:47:in `block (2 levels) in create'
+  app/controllers/activities_controller.rb:45:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2011-11-13 15:13:54 -0600
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "activity"=>{"name"=>"asdfdfs", "description"=>"dsdfsdf", "due"=>"sdfsdf", "private"=>"0"}, "commit"=>"Create Activity"}
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "activities" ("created_at", "description", "due", "name", "private", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 13 Nov 2011 21:13:54 UTC +00:00], ["description", "dsdfsdf"], ["due", "sdfsdf"], ["name", "asdfdfs"], ["private", false], ["updated_at", Sun, 13 Nov 2011 21:13:54 UTC +00:00]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 13ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:13:54 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (50.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/activities/5/add" for 127.0.0.1 at 2011-11-13 15:14:05 -0600
+  Processing by ActivitiesController#add as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "bucket_items" ("activity_id", "complete", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["activity_id", 5], ["complete", false], ["created_at", Sun, 13 Nov 2011 21:14:05 UTC +00:00], ["updated_at", Sun, 13 Nov 2011 21:14:05 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 73ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:14:05 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (24.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:14:06 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1[0m
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (97.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 107.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3/check_activity?item=1" for 127.0.0.1 at 2011-11-13 15:14:08 -0600
+  Processing by UsersController#check_activity as HTML
+  Parameters: {"item"=>"1", "id"=>"3"}
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (1.0ms)[0m  [1mUPDATE "bucket_items" SET "complete" = 't', "updated_at" = '2011-11-13 21:14:08.734635' WHERE "bucket_items"."id" = 3[0m
+Redirected to http://localhost:3000/users/3/bucket_list
+Completed 302 Found in 22ms
+
+
+Started GET "/users/3/bucket_list" for 127.0.0.1 at 2011-11-13 15:14:08 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=3):
+  app/controllers/users_controller.rb:86:in `bucket_list'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started GET "/users/2/check_activity?item=0" for 127.0.0.1 at 2011-11-13 15:14:15 -0600
+  Processing by UsersController#check_activity as HTML
+  Parameters: {"item"=>"0", "id"=>"2"}
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (1.0ms)[0m  UPDATE "bucket_items" SET "complete" = 't', "updated_at" = '2011-11-13 21:14:15.631390' WHERE "bucket_items"."id" = 2
+Redirected to http://localhost:3000/users/2/bucket_list
+Completed 302 Found in 19ms
+
+
+Started GET "/users/2/bucket_list" for 127.0.0.1 at 2011-11-13 15:14:15 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 2 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 2 AND "bucket_items"."complete" = 't'[0m
+Rendered users/bucket_list.html.erb within layouts/application (14.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-11-13 15:15:42 -0600
+
+ActionController::RoutingError (No route matches [GET] "/categories"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:15:49 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (24.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:15:52 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (44.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:15:59 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (43.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:16:00 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (25.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/activities/2/add" for 127.0.0.1 at 2011-11-13 15:16:01 -0600
+  Processing by ActivitiesController#add as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "bucket_items" ("activity_id", "complete", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["activity_id", 2], ["complete", false], ["created_at", Sun, 13 Nov 2011 21:16:01 UTC +00:00], ["updated_at", Sun, 13 Nov 2011 21:16:01 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 45ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:16:01 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (22.0ms)
+Rendered shared/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:16:02 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (72.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 85ms (Views: 80.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/4/check_activity?item=0" for 127.0.0.1 at 2011-11-13 15:16:04 -0600
+  Processing by UsersController#check_activity as HTML
+  Parameters: {"item"=>"0", "id"=>"4"}
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (2.0ms)[0m  UPDATE "bucket_items" SET "complete" = 't', "updated_at" = '2011-11-13 21:16:04.563683' WHERE "bucket_items"."id" = 4
+Redirected to http://localhost:3000/users/4/bucket_list
+Completed 302 Found in 45ms
+
+
+Started GET "/users/4/bucket_list" for 127.0.0.1 at 2011-11-13 15:16:04 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=4):
+  app/controllers/users_controller.rb:86:in `bucket_list'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2011-11-13 15:17:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-13 15:17:05 -0600
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (9.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-11-13 15:17:08 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered users/show.html.erb within layouts/application (6.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 51ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-13 15:17:09 -0600
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (9.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:17:14 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (43.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:17:47 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (70.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 79.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:17:48 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (27.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities/4/add" for 127.0.0.1 at 2011-11-13 15:17:50 -0600
+  Processing by ActivitiesController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "bucket_items" ("activity_id", "complete", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["activity_id", 4], ["complete", false], ["created_at", Sun, 13 Nov 2011 21:17:50 UTC +00:00], ["updated_at", Sun, 13 Nov 2011 21:17:50 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 48ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:17:50 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (23.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:17:51 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (47.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 61ms (Views: 57.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/5/check_activity?item=0" for 127.0.0.1 at 2011-11-13 15:17:54 -0600
+  Processing by UsersController#check_activity as HTML
+  Parameters: {"item"=>"0", "id"=>"5"}
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36m (1.0ms)[0m  [1mUPDATE "bucket_items" SET "complete" = 't', "updated_at" = '2011-11-13 21:17:54.211960' WHERE "bucket_items"."id" = 5[0m
+Redirected to http://localhost:3000/users/5/bucket_list
+Completed 302 Found in 19ms
+
+
+Started GET "/users/5/bucket_list" for 127.0.0.1 at 2011-11-13 15:17:54 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "5"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=5):
+  app/controllers/users_controller.rb:86:in `bucket_list'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:18:12 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (23.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 30.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 15:18:13 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (9.0ms)
+Rendered activities/new.html.erb within layouts/application (10.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2011-11-13 15:18:16 -0600
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "activity"=>{"name"=>"1", "description"=>"", "due"=>"", "private"=>"0"}, "commit"=>"Create Activity"}
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "activities" ("created_at", "description", "due", "name", "private", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 13 Nov 2011 21:18:16 UTC +00:00], ["description", ""], ["due", ""], ["name", "1"], ["private", false], ["updated_at", Sun, 13 Nov 2011 21:18:16 UTC +00:00]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 13ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:18:16 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (25.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 15:18:17 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (9.0ms)
+Rendered activities/new.html.erb within layouts/application (11.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2011-11-13 15:18:19 -0600
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "activity"=>{"name"=>"2", "description"=>"", "due"=>"", "private"=>"0"}, "commit"=>"Create Activity"}
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "activities" ("created_at", "description", "due", "name", "private", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 13 Nov 2011 21:18:19 UTC +00:00], ["description", ""], ["due", ""], ["name", "2"], ["private", false], ["updated_at", Sun, 13 Nov 2011 21:18:19 UTC +00:00]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 15ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:18:19 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (29.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities/6/add" for 127.0.0.1 at 2011-11-13 15:18:22 -0600
+  Processing by ActivitiesController#add as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "bucket_items" ("activity_id", "complete", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["activity_id", 6], ["complete", false], ["created_at", Sun, 13 Nov 2011 21:18:22 UTC +00:00], ["updated_at", Sun, 13 Nov 2011 21:18:22 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 44ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:18:22 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (25.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities/6" for 127.0.0.1 at 2011-11-13 15:18:25 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered activities/show.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:18:28 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (73.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 82.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/6/check_activity?item=0" for 127.0.0.1 at 2011-11-13 15:18:31 -0600
+  Processing by UsersController#check_activity as HTML
+  Parameters: {"item"=>"0", "id"=>"6"}
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (1.0ms)[0m  UPDATE "bucket_items" SET "complete" = 't', "updated_at" = '2011-11-13 21:18:31.678680' WHERE "bucket_items"."id" = 6
+Redirected to http://localhost:3000/users/6/bucket_list
+Completed 302 Found in 23ms
+
+
+Started GET "/users/6/bucket_list" for 127.0.0.1 at 2011-11-13 15:18:31 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=6):
+  app/controllers/users_controller.rb:86:in `bucket_list'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-11-13 15:19:37 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered users/show.html.erb within layouts/application (6.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 71ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-11-13 15:21:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/categories"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:21:32 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (49.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:21:34 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (52.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:21:35 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (73.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 83.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:21:38 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (28.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities/7/add" for 127.0.0.1 at 2011-11-13 15:21:39 -0600
+  Processing by ActivitiesController#add as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "bucket_items" ("activity_id", "complete", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["activity_id", 7], ["complete", false], ["created_at", Sun, 13 Nov 2011 21:21:39 UTC +00:00], ["updated_at", Sun, 13 Nov 2011 21:21:39 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 45ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:21:39 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (26.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:21:40 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 7 LIMIT 1[0m
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (53.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/7/check_activity?item=0" for 127.0.0.1 at 2011-11-13 15:21:41 -0600
+  Processing by UsersController#check_activity as HTML
+  Parameters: {"item"=>"0", "id"=>"7"}
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (1.0ms)[0m  UPDATE "bucket_items" SET "complete" = 't', "updated_at" = '2011-11-13 21:21:42.043747' WHERE "bucket_items"."id" = 7
+Redirected to http://localhost:3000/users/7/bucket_list
+Completed 302 Found in 20ms
+
+
+Started GET "/users/7/bucket_list" for 127.0.0.1 at 2011-11-13 15:21:42 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "7"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=7):
+  app/controllers/users_controller.rb:86:in `bucket_list'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.0ms)
+
+
+Started GET "/users/7/bucket_list" for 127.0.0.1 at 2011-11-13 15:23:02 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 7 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (71.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 84ms (Views: 80.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:23:04 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (160.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 168.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 15:23:06 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (8.0ms)
+Rendered activities/new.html.erb within layouts/application (11.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2011-11-13 15:23:09 -0600
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FWXUkWkCvsqb9FmJmf//6eNaeSho/hscjeE0Zc26xw=", "activity"=>{"name"=>"5", "description"=>"", "due"=>"", "private"=>"0"}, "commit"=>"Create Activity"}
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "activities" ("created_at", "description", "due", "name", "private", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 13 Nov 2011 21:23:09 UTC +00:00], ["description", ""], ["due", ""], ["name", "5"], ["private", false], ["updated_at", Sun, 13 Nov 2011 21:23:09 UTC +00:00]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 15ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:23:09 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (57.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities/8/add" for 127.0.0.1 at 2011-11-13 15:23:10 -0600
+  Processing by ActivitiesController#add as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "bucket_items" ("activity_id", "complete", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["activity_id", 8], ["complete", false], ["created_at", Sun, 13 Nov 2011 21:23:11 UTC +00:00], ["updated_at", Sun, 13 Nov 2011 21:23:11 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 73ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:23:11 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (26.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:23:12 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 8 LIMIT 1[0m
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 7 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (48.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 54.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/8/check_activity?item=0" for 127.0.0.1 at 2011-11-13 15:23:13 -0600
+  Processing by UsersController#check_activity as HTML
+  Parameters: {"item"=>"0", "id"=>"8"}
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36m (1.0ms)[0m  [1mUPDATE "bucket_items" SET "complete" = 't', "updated_at" = '2011-11-13 21:23:14.010108' WHERE "bucket_items"."id" = 8[0m
+Redirected to http://localhost:3000/users/8/bucket_list
+Completed 302 Found in 18ms
+
+
+Started GET "/users/8/bucket_list" for 127.0.0.1 at 2011-11-13 15:23:14 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBucketItem Load (1.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'[0m
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 7 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 8 LIMIT 1
+Rendered users/bucket_list.html.erb within layouts/application (45.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 58ms (Views: 53.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:23:28 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (28.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 15:23:29 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (33.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2011-11-13 15:26:38 -0600
+
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2011-11-13 15:27:01 -0600
+
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-11-13 15:27:05 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered users/show.html.erb within layouts/application (5.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:33:01 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (26.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 15:33:01 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 15:33:01 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:33:02 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBucketItem Load (1.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 7 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 8 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (151.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 164ms (Views: 159.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 15:33:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 15:33:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 15:33:03 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (10.0ms)
+Rendered activities/new.html.erb within layouts/application (12.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 15:33:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 15:33:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 15:34:50 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (62.0ms)
+Rendered activities/new.html.erb within layouts/application (129.0ms)
+Completed 500 Internal Server Error in 140ms
+
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0x47802c0>:0x45fe508>):
+    21:   </div>
+    22:    <div class="field">
+    23:     <%= f.label :due %><br />
+    24:     <%= f.text_field :due, :id => 'date' , name => 'date' %>
+    25:   </div>
+    26:    <div class="field">
+    27:     <%= f.label :private %><br />
+  app/views/activities/_form.html.erb:24:in `block in _app_views_activities__form_html_erb__458384903_36677676'
+  app/views/activities/_form.html.erb:1:in `_app_views_activities__form_html_erb__458384903_36677676'
+  app/views/activities/new.html.erb:3:in `_app_views_activities_new_html_erb___768530459_48050148'
+  app/controllers/activities_controller.rb:29:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 15:35:04 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (10.0ms)
+Rendered activities/new.html.erb within layouts/application (12.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 15:35:05 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 15:35:05 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/1/bucket_list" for 127.0.0.1 at 2011-11-13 15:39:31 -0600
+  Processing by UsersController#bucket_list as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (60.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBucketItem Load (0.0ms)[0m  SELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 'f'
+  [1m[36mBucketItem Load (0.0ms)[0m  [1mSELECT "bucket_items".* FROM "bucket_items" WHERE "bucket_items"."user_id" = 1 AND "bucket_items"."complete" = 't'[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 3 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 5 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 2 LIMIT 1[0m
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 4 LIMIT 1
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 6 LIMIT 1[0m
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = 7 LIMIT 1
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = 8 LIMIT 1[0m
+Rendered users/bucket_list.html.erb within layouts/application (271.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 727ms (Views: 472.0ms | ActiveRecord: 64.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 15:39:38 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 15:39:38 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 15:39:41 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (10.0ms)
+Rendered activities/new.html.erb within layouts/application (12.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 15:39:41 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 15:39:41 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 15:54:24 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+Rendered activities/index.html.erb within layouts/application (119.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 130ms (Views: 128.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 15:54:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 15:54:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 15:54:25 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 15:54:25 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 15:54:25 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:13:51 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (1.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 16:13:52 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 16:13:52 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/images/map.png" for 127.0.0.1 at 2011-11-13 16:13:52 -0600
+Served asset /images/map.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/map.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:15:44 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (281.0ms)
+Completed 500 Internal Server Error in 430ms
+
+ActionView::Template::Error (undefined local variable or method `categories_path' for #<#<Class:0x3e7bb98>:0x3e75c70>):
+    20: 
+    21: <h3> Experiences </h3>
+    22: 
+    23: <%= link_to "write about your experience", categories_path %>
+    24: 
+    25: <%= link_to 'Edit', edit_activity_path(@activity) %> |
+    26: <%= link_to 'Back', activities_path %>
+  app/views/activities/show.html.erb:23:in `_app_views_activities_show_html_erb__131766048_31438560'
+  app/controllers/activities_controller.rb:18:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:16:03 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (8.0ms)
+Rendered shared/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 16:16:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 16:16:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/images/map.png" for 127.0.0.1 at 2011-11-13 16:16:03 -0600
+Served asset /images/map.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/map.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:16:19 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (9.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 16:16:19 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 16:16:19 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:16:40 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (9.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 16:16:40 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 16:16:40 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:17:51 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (8.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 16:17:51 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 16:17:51 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:18:44 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 16:18:44 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 16:18:44 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:18:52 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.0ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (7.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 16:18:53 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 16:18:53 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2011-11-13 16:19:03 -0600
+  Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered activities/show.html.erb within layouts/application (8.0ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 16:19:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 16:19:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)

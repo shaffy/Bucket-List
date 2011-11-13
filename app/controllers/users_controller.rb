@@ -83,7 +83,7 @@ class UsersController < ApplicationController
   end
   
   def bucket_list
-	@user = User.find(params[:id])
+	@user = User.find(1)
 	@bucket_items = @user.bucket_items
 	
 	respond_to do |format|
