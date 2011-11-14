@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-    @activities = Activity.where(:private => false)
+    @activities = Activity.all
 	
     respond_to do |format|
       format.html # index.html.erb
