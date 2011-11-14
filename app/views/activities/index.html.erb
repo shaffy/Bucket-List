@@ -21,7 +21,7 @@
 	<% else %>
 		
 	<td class="add-activity">
-		<%= link_to(add_activity_path(activity.id), :class => 'image-plus') do %>
+		<%= link_to(add_activity_path(), :class => 'image-plus') do %>
 			 <%= image_tag ("/images/plus-small.png") %>
 		<% end %>
 		<div class="add-text">add to my bucket list</div>

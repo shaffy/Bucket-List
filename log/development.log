@@ -20424,3 +20424,136 @@ ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.
   
 
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 17:14:28 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (83.6ms)
+Rendered shared/_sidebar.html.erb (0.3ms)
+Completed 200 OK in 162ms (Views: 145.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 17:14:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered /home/dhruv7/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 17:14:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered /home/dhruv7/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 17:14:33 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (8.0ms)
+Rendered activities/new.html.erb within layouts/application (9.3ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 17:14:33 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered /home/dhruv7/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 17:14:33 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered /home/dhruv7/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 17:21:31 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (128.4ms)
+Rendered shared/_sidebar.html.erb (0.5ms)
+Completed 200 OK in 269ms (Views: 241.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 17:21:36 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (12.8ms)
+Rendered activities/new.html.erb within layouts/application (14.4ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 17:21:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered /home/dhruv7/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 17:21:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered /home/dhruv7/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2011-11-13 17:21:41 -0600
+  Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE "activities"."private" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 1 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 2 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 4 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 5 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 6 AND "bucket_items"."user_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 7 AND "bucket_items"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "bucket_items" WHERE "bucket_items"."activity_id" = 8 AND "bucket_items"."user_id" = 1 LIMIT 1
+Rendered activities/index.html.erb within layouts/application (26.9ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2011-11-13 17:21:43 -0600
+  Processing by ActivitiesController#new as HTML
+Rendered activities/_form.html.erb (10.7ms)
+Rendered activities/new.html.erb within layouts/application (11.7ms)
+Rendered shared/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css" for 127.0.0.1 at 2011-11-13 17:21:43 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css"):
+  
+
+Rendered /home/dhruv7/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascript/jquery-ui-1.8.16.custom.min.js" for 127.0.0.1 at 2011-11-13 17:21:43 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascript/jquery-ui-1.8.16.custom.min.js"):
+  
+
+Rendered /home/dhruv7/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
